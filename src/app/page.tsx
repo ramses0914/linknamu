@@ -2,8 +2,9 @@ import ProfileHeader from "@/components/ProfileHeader";
 import LinkCard from "@/components/LinkCard";
 
 const profile = {
-  name: "최병람",
-  bio: "사랑에 목마른 자",
+  name: "BRCHOI",
+  bio: "풀스택 개발자 : 요즘에는 AI 개발에 관심이 많아요",
+  avatarUrl: "/profile.jpeg",
 };
 
 const links = [
@@ -14,10 +15,10 @@ const links = [
 
 export default function Home() {
   return (
-    <div className="flex flex-1 items-center justify-center bg-zinc-50 px-4 py-12 dark:bg-black">
-      <main className="flex w-full max-w-sm flex-col items-center gap-8 rounded-2xl bg-white p-8 shadow-sm dark:bg-zinc-950">
-        <ProfileHeader name={profile.name} bio={profile.bio} />
-        <div className="flex w-full flex-col gap-5">
+    <div className="flex flex-1 items-center justify-center bg-gradient-to-b from-[#fdf6ec] via-[#fdefe0] to-[#ffe2c9] px-6 py-16 dark:from-[#241d18] dark:via-[#2b221b] dark:to-[#33261c]">
+      <main className="flex w-full max-w-sm flex-col items-center gap-12">
+        <ProfileHeader name={profile.name} bio={profile.bio} avatarUrl={profile.avatarUrl} />
+        <div className="flex w-full flex-col gap-4">
           {links.map((link) => (
             <LinkCard key={link.id} title={link.title} url={link.url} />
           ))}
