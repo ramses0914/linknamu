@@ -1,5 +1,5 @@
 import ProfileHeader from "@/components/ProfileHeader";
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 
 const profile = {
   name: "BRCHOI",
@@ -18,11 +18,7 @@ export default function Home() {
     <div className="flex flex-1 items-center justify-center bg-gradient-to-b from-[#fdf6ec] via-[#fdefe0] to-[#ffe2c9] px-6 py-16 dark:from-[#241d18] dark:via-[#2b221b] dark:to-[#33261c]">
       <main className="flex w-full max-w-sm flex-col items-center gap-12">
         <ProfileHeader name={profile.name} bio={profile.bio} avatarUrl={profile.avatarUrl} />
-        <div className="flex w-full flex-col gap-4">
-          {links.map((link) => (
-            <LinkCard key={link.id} title={link.title} url={link.url} />
-          ))}
-        </div>
+        <LinkList links={links} />
       </main>
     </div>
   );
